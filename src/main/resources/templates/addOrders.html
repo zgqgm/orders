@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>添加订单</title>
+    <link href="../static/css/addOrders.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <form id="form">
+        <h1>添加订单</h1>
+        <div class="question">
+            <input id="nameI" type="text" required />
+            <label>姓名</label>
+        </div>
+        <div class="question">
+            <input id="priceI" type="text" required />
+            <label>价格</label>
+        </div>
+        <div class="textLin">时间</div>
+        <div class="question">
+            <input id="timeI" type="date" required />
+        </div>
+        <div class="textLin">订单状态</div>
+        <div class="select-box">
+            <div class="select-box__current" tabindex="1">
+                <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="0" value="已收货" name="Ben" checked="checked"/>
+                    <p class="select-box__input-text">已收货</p>
+                </div>
+                <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="1" value="已结算" name="Ben"/>
+                    <p class="select-box__input-text">已结算</p>
+                </div>
+                <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="2" value="已失效" name="Ben"/>
+                    <p class="select-box__input-text">已失效</p>
+                </div>
+                <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="3" value="已付款" name="Ben"/>
+                    <p class="select-box__input-text">已付款</p>
+                </div><img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
+            </div>
+            <ul class="select-box__list">
+                <li>
+                    <label class="select-box__option" for="0" aria-hidden="aria-hidden">已收货</label>
+                </li>
+                <li>
+                    <label class="select-box__option" for="1" aria-hidden="aria-hidden">已结算</label>
+                </li>
+                <li>
+                    <label class="select-box__option" for="2" aria-hidden="aria-hidden">已失效</label>
+                </li>
+                <li>
+                    <label class="select-box__option" for="3" aria-hidden="aria-hidden">已付款</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="button" onclick="upload()">提交</div>
+            <div class="loader">
+                <div class="check">
+                    <span class="check-one"></span>
+                    <span class="check-two"></span>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</body>
+<script src="../static/js/addOrders.js"></script>
+</html>

@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class OrdersController {
     @RequestMapping("orders")
     public String lode(){
-        return "ordersList";
+        return "addOrders";
     }
 }
