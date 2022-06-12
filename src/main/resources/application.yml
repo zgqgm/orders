@@ -1,5 +1,10 @@
 spring:
   thymeleaf:
     cache: false
+    check-template-location: true
+    suffix: .html
+    prefix: classpath:/templates/
+    mode: HTML5
+    encoding: UTF-8
   mvc:
     static-path-pattern: /static/**

@@ -37,3 +37,6 @@ modeSwitch.addEventListener("click", function () {
     modeSwitch.classList.toggle("active");
 });
 
+ function addButton() {
+     location.href="/upOrders/orders";
+ }

@@ -13,18 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 function upload() {
     //var data = new FormData(document.getElementById("form"))
-    let name = document.getElementById("nameI").valueOf();
-    let price = document.getElementById("priceI").valueOf();
-    let time = document.getElementById("timeI").valueOf();
-    let sta = document.querySelector('.check');
+    let name = $("#nameI").val();
+    let price = $("#priceI").val();
+    let time = $("#timeI").val();
+    let sta = $(".select-box__input:checked").val();
     $.ajax({
-        url: "/addOrders/add",
-        type: "post",
+        url: "/upOrders/add",
+        type: "get",
         data: {"name":name,"price":price,"time":time,"sta":sta},
         success: function (resp) {
             if (resp.success==="true"){
-                location.href="orders";
+                location.href="http://localhost:8080/ordersLists/orders";
             }
         }
-    })
+    });
+
 }
